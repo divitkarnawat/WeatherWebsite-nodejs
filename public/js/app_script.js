@@ -11,7 +11,7 @@ formWeather.addEventListener('submit', (e) =>
     e.preventDefault()
     mp.innerHTML="Loading......"
     ep.innerHTML=""
-    const address = 'http://localhost:3000/weather?address=' + searchAddress.value
+    const address = '/weather?address=' + searchAddress.value
     fetch(address).then((response) => {
         response.json().then((data) => {
             if (data.error)
